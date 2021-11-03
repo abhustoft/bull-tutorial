@@ -22,13 +22,13 @@ if (process.env.ENV === 'development') {
  */
 
 export const connectToMongo = () => {
-  mongoose.connect(process.env.MONGO_URI, {
+  mongoose.connect("mongodb://127.0.0.1:27017/bull_mongo", {
     useFindAndModify: false,
     keepAlive: 1,
     useNewUrlParser: true,
     useCreateIndex: true,
-    user: process.env.MONGO_USER,
-    pass: process.env.MONGO_PASS,
+    user: "mongoadmin",
+    pass: "mongoadmin",
     auth: { authSource: 'admin' },
   });
   return mongoose.connection;

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import models, { connectToMongo, getMongoConnection } from '../mongoose';
+import models, { connectToMongo, getMongoConnection } from "../mongoose";
 
 connectToMongo();
 const db = getMongoConnection();

@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon -r dotenv-safe/config -r esm ./src/server.js",
-    "fixture": "node -r dotenv-safe/config -r esm ./src/fixtures/index.js",
+    "start": "nodemon  -r esm ./src/server.js",
+    "fixture": "node  -r esm ./src/fixtures/index.js",
     "lint": "./node_modules/.bin/eslint ./src",
     "pretty": "prettier --write '**/*.{js,json}' '!node_modules/**'",
     "postpretty": "yarn lint --fix",
@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "bull": "^3.18.0",
+    "bull-board": "1.5.1",
     "dotenv-safe": "^8.2.0",
     "esm": "^3.2.25",
     "express": "^4.17.1",
